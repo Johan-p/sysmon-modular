@@ -1,0 +1,11 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <RegistryEvent onmatch="exclude">
+			<TargetObject condition="is">\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers\Microsoft Print to PDF\PrinterDriverData</TargetObject>
+			<TargetObject condition="end with">LanguageList</TargetObject> 
+			<!--Microsoft:Windows: printer en languagelist -->
+		</RegistryEvent>
+</RuleGroup>
+</EventFiltering>
+</Sysmon>

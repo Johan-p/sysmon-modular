@@ -1,0 +1,10 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <NetworkConnect onmatch="exclude">
+      		<!-- Event ID 3 == Network Connection. Log all initiated network connection except -->
+			<Image condition="end with">winlogbeat.exe</Image> <!--Winlogbeat-->
+	  </NetworkConnect>	
+</RuleGroup>
+</EventFiltering>
+</Sysmon>

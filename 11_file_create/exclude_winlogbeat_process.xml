@@ -1,0 +1,10 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <FileCreate onmatch="exclude">
+			<!--SECTION: Winlogbeat-->
+			<Image condition="image">winlogbeat.exe</Image>
+		</FileCreate>
+</RuleGroup>
+</EventFiltering>
+</Sysmon>

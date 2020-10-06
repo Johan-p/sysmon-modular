@@ -1,0 +1,10 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <ProcessCreate onmatch="exclude">
+      		<!-- Event ID 1 == Process Creation. Log all newly created processes except -->
+			<Image condition="contains">winlogbeat</Image><!--Winlogbeats agent, to do include full file path!-->
+			</ProcessCreate>
+</RuleGroup>
+</EventFiltering>
+</Sysmon>

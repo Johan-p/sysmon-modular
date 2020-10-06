@@ -1,0 +1,10 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <FileCreate onmatch="exclude">
+			<!-- Event ID 11 == FileCreate. Log everything except -->
+			<TargetFilename condition="begin with">C:\Windows\System32\winevt\Logs\</TargetFilename><!-- Microsoft:Windows: eventlogs-->
+		</FileCreate>
+</RuleGroup>
+</EventFiltering>
+</Sysmon>
