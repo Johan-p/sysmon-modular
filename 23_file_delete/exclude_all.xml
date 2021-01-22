@@ -2,7 +2,8 @@
    <EventFiltering>
       <RuleGroup name="" groupRelation="or">
          <FileDelete onmatch="exclude">
-         <User condition="contains any">NETWORK SERVICE; LOCAL SERVICE</User>
+         <TargetFilename condition="begin with">C:\</TargetFilename> 
+         <!--exclude C drive-->
          </FileDelete>
       </RuleGroup>
 </EventFiltering>
